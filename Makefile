@@ -13,4 +13,6 @@ testdir/%.json:
 	wget -q http://purl.obolibrary.org/obo/$*/$*.json -O $@
 	java -jar $(OBOGRAPHS) $@ out
 
-test: $(FILES)
+.PHONY: test
+
+test:	$(FILES)
